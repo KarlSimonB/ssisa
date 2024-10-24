@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+body .logo {
+  border-radius: 100%;
+  padding: 5px;
+  width: 170px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  /* border: 1px solid #ddd; */
+  /* border-radius: 4px; */
+  /* padding: 5px; */
+  /* width: 100px; Adjust the width as needed */
+  /* height: auto; Maintain aspect ratio */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(224, 224, 224, 0.548);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex; /* Show links by default on larger screens */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: rgb(49, 49, 49);
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.nav-list-mobile {
+  display: none;
+  position: absolute; /* Position it over the content */
+  top: 0px; /* Adjust based on your header height */
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 1; /* Ensure it covers other content */
+  flex-direction: row; /* Stack links vertically */
+  padding: 15px 0; /* Add some vertical padding */
+  font-size: x-large;
+}
+
+.nav-list-mobile li {
+  padding: 15px 15px; /* Add padding for the links */
+}
+
+.nav-list-mobile a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Dark text color */
+  display: block; /* Make the entire area clickable */
+}
+
+.menu-toggle:checked + .hamburger + .nav-list-mobile {
+  display: flex; /* Show links when the menu is toggled */
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+  }
+  .nav-list-mobile {
+    display: flex; /* Show mobile links when toggled */
+  }
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+  .menu-toggle:checked + .hamburger + .nav-list-mobile {
+    display: flex; /* Show links when the menu is toggled */
+  }
+  /* Optional: Add some styling to the mobile links */
+  .nav-list-mobile li {
+    text-align: center; /* Center align mobile links */
+    margin: 0; /* Remove margin */
+  }
+}
+.menu-toggle {
+  opacity: 0;
+}
+
+footer {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+footer img {
+  padding-right: 15px;
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+}
+
+.maintext {
+  margin: 15px 0px 80px 15px;
+}
+.maintext .welcome-text {
+  font-size: xx-large;
+  padding: 30px 0px 2px 30px;
+}
+.maintext .quote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #ffffff;
+  padding-left: 10px;
+  margin: 2px;
+  font-size: 1em;
+  outline: none; /* Remove outline */
+  padding: 1px 0px 2px 30px;
+}
+
+.linkhtml3 {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.resbox1,
+.resbox2,
+.resbox3,
+.resbox4,
+.resbox5,
+.resbox6,
+.resbox7,
+.resbox8,
+.resbox9,
+.resbox10 {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  box-shadow: 0px 0px 10px 2px grey;
+  padding: 15px;
+  margin: 0px 50px 50px 50px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.box-content1 {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.box-content2, .box-content4, .box-content5 {
+  font-size: xx-large;
+  padding-left: 15px;
+}
+
+.box-content2 p, .box-content4 p, .box-content5 p {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: medium;
+}
+
+.box1-content-text, .box4-content-text, .box5-content-text {
+  margin-left: 5px;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.box1-p, .box4-p, .box5-p {
+  font-size: small;
+  margin-top: 2px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.scrollable-nav {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px 20px 20px;
+}
+
+.genre-box {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  width: 50vw;
+  background-image: linear-gradient(to right, rgba(240, 112, 112, 0.726), rgba(255, 148, 246, 0.808));
+  box-shadow: inset rgba(219, 121, 121, 0.24) 0px 0px 5px 2px;
+  list-style-type: none;
+  margin: 25px;
+  padding: 30px 20px;
+  border-radius: 5px;
+  width: 250px;
+  font-size: larger;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.genre-box:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transform: scale(1.2, 1.2);
+}
+
+.box5-content, .box4-content, .box3-content {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px 2px grey;
+  padding: 10px;
+  width: calc(50% - 10px); /* Set width to half and account for spacing */
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.box4 img, .box5 img {
+  width: 120px;
+}
+
+.emoji {
+  font-size: 100px;
+  color: red;
+  vertical-align: middle;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  justify-content: space-between;
+}
+main .sort-main-text {
+  margin: 50px;
+}
+main .sort-main-text h1 {
+  margin-bottom: 1px;
+  font-size: xx-large;
+}
+main .sort-main-text .paragraf-1 {
+  margin-top: 0%;
+}
+main article .sortiment {
+  text-align: center;
+}
+main article .boxes {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: rgba(224, 224, 224, 0.5490196078);
+  box-shadow: 0px 0px 10px 2px grey;
+  margin: 30px 20px 30px 20px;
+  padding: 20px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+main article .bokbox {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+main article li {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  list-style-type: none;
+  width: 120px;
+  margin: 5px;
+  padding: 1px;
+}
+main article img {
+  width: 120px;
+}
+
+.rec-welcome {
+  display: flex;
+  flex-direction: column;
+  margin: 45px 100px 30px 50px;
+  font-size: xx-large;
+  text-align: start;
+}
+
+.nummer {
+  font-size: x-large;
+  padding-right: 15px;
+}
+
+.title-res {
+  font-size: x-large;
+  padding-left: 15px;
+}
+
+.p-res {
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.welcome-event {
+  display: flex;
+  flex-direction: column;
+  margin: 45px 100px 30px 100px;
+  font-size: xx-large;
+  text-align: start;
+}
+.welcome-event .main-text {
+  margin: 15px 0px 20px 15px;
+}
+
+.ebox1, .ebox2, .ebox3, .ebox4, .ebox5, .ebox6 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px rgb(163, 163, 163);
+  background-color: #f9f9f9;
+  margin: 0px 100px 45px 100px;
+}
+.ebox1 .event-date, .ebox2 .event-date, .ebox3 .event-date, .ebox4 .event-date, .ebox5 .event-date, .ebox6 .event-date {
+  font-size: x-large;
+}
+.ebox1 .event-title, .ebox2 .event-title, .ebox3 .event-title, .ebox4 .event-title, .ebox5 .event-title, .ebox6 .event-title {
+  font-size: larger;
+}
+
+.kontaktli {
+  padding: 20px;
+}
+.kontaktli .h1-contact {
+  font-weight: 700;
+}
+
+.kontaktaoss {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+.boxes .kingbox {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  justify-content: space-around;
+  height: 30vh;
+}
+.boxes .kingnummer {
+  font-size: larger;
+  font-weight: bold;
+}
+.boxes .king-img {
+  width: 100px;
+}
+.boxes .kingcontent1 {
+  width: 250px;
+  font-size: 500;
+}/*# sourceMappingURL=style.css.map */
